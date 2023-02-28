@@ -45,7 +45,8 @@ import { PresentationModule } from './presentation/presentation.module';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    PresentationModule
+    PresentationModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

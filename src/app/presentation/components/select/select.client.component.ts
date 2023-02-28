@@ -1,23 +1,25 @@
-import { Component } from "@angular/core";
-import ClientUseCase from "src/app/core/usecases/client/client.usecase";
+import { Component, Input } from "@angular/core";
+import { ControlContainer, FormBuilder, FormGroup, FormGroupDirective } from "@angular/forms";
+import { GetClientsUseCase } from "src/app/core/usecases/client/get-clients.usecase";
 import { Select } from "./select.component";
 
 @Component({
     selector: 'cc-select-client',
-    templateUrl: './select.component.html'
+    templateUrl: './select.component.html',
+    viewProviders: [{provide: ControlContainer, useExisting: FormGroupDirective}]
 })
 export class SelectClientComponent extends Select {
 
     override bindValue: string = "name";
     override bindId: string = "id";
     override placeHolder: string = "Cliente";
+    override controlName = "idClient"
 
-    constructor(private clientUseCase: ClientUseCase) {
+    constructor(getClientsUseCase: GetClientsUseCase) {
         super();
-        clientUseCase.getClients().subscribe(clients => {
+        getClientsUseCase.get().subscribe(clients => {
             this.itemList = clients;
             this.sourceComplete();
         });
     }
-
 }

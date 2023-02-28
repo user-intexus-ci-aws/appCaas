@@ -1,1 +1,9 @@
-<p>monitoring-filters works!</p>
+<form [formGroup]="filtersForm">
+    <mat-form-field>
+        <cc-select-client matNativeControl></cc-select-client>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <cc-select-product></cc-select-product>
+    </mat-form-field>
+</form>

@@ -3,13 +3,15 @@ import { Observable } from "rxjs";
 import { Client } from "../../models/client";
 import { ClientRepository } from "../../repositories/client.repository";
 
-@Injectable()
-export default class ClientUseCase {
+@Injectable({
+    providedIn: 'root'
+})
+export class GetClientsUseCase {
     
     constructor(private clientRepository: ClientRepository) { }
 
-    getClients(): Observable<Client[]> {
-        return this.clientRepository.getClients()
+    get(): Observable<Client[]> {
+        return this.clientRepository.getClients();
     }
 
 }

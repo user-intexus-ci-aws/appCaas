@@ -1,14 +1,14 @@
 export class BaseResponse {
     success: boolean;
     message: string;
-    parameters: Array<Parametro>;
+    parametros: Array<Parametro>;
 
     isSuccess(): boolean {
-        return this.success && this.parameters != null;
+        return this.success && this.parametros != null;
     }
 
     getValue(searchValue: string) {
-        let parameter = this.parameters.filter(f => f.name.toUpperCase() == searchValue.toUpperCase());
+        let parameter = this.parametros.filter(f => f.name.toUpperCase() == searchValue.toUpperCase());
         if (parameter != null) {
             return parameter[0].value;
         }

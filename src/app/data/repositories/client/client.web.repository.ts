@@ -10,7 +10,7 @@ import { GetClientsRepositoryMapper } from "./mappers/get.clients.repository.map
 @Injectable({ 
     providedIn: 'root'
  })
-export class ClientMockRepository extends ClientRepository {
+export class ClientWebRepository extends ClientRepository {
 
     clientUrl: String;
 
@@ -24,6 +24,7 @@ export class ClientMockRepository extends ClientRepository {
         return this.http.get<BaseResponse>(`${this.clientUrl}GetRow`)
             .pipe(
                 map((res) => {
+                    res = Object.assign(new BaseResponse(), res);
                     if (res.isSuccess())
                         return JSON.parse(res.getValue("Clients")!).map(mapper.mapFrom);
                     else
