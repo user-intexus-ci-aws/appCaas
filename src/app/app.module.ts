@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { LoginComponent } from './login/login.component';
+import { ComponentsModule } from './presentation/components/components.module';
+import { PresentationModule } from './presentation/presentation.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { LoginComponent } from './login/login.component';
     MatMenuModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    PresentationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
