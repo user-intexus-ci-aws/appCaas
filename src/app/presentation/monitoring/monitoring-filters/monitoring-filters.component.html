@@ -1,9 +1,45 @@
-<form [formGroup]="filtersForm">
-    <mat-form-field>
-        <cc-select-client matNativeControl></cc-select-client>
-    </mat-form-field>
-    
-    <mat-form-field>
-        <cc-select-product></cc-select-product>
-    </mat-form-field>
+<span class="title">Ingrese datos</span>
+<form [formGroup]="filtersForm" (ngSubmit)="search()">
+    <div class="container">
+        <div class="item-container">
+            <span class="title-control">Cliente</span>
+            <cc-select-client class="select-control" (onChange)="changeClient()"></cc-select-client>
+        </div>
+        <div class="item-container">
+            <span class="title-control">Producto</span>
+            <cc-select-product class="select-control"></cc-select-product>
+        </div>
+        <div class="item-container">
+            <span class="title-control">Impresora</span>
+            <cc-select-printer class="select-control"></cc-select-printer>
+        </div>
+        <div class="item-container">
+            <span class="title-control">Estado</span>
+            <cc-select-transaction-status class="select-control"></cc-select-transaction-status>
+        </div>
+        <div class="item-container">
+            <span class="title-control">ID TRX cliente</span>
+            <input type="text" class="text-control" formControlName="clientIdTRX">
+        </div>
+        <div class="item-container">
+            <span class="title-control">ID TRX interno</span>
+            <input type="text" class="text-control" formControlName="internalIdTRX">
+        </div>
+        <div class="item-container">
+            <span class="title-control">Hora inicio</span>
+            <input type="time" class="text-control" formControlName="startTime">
+        </div>
+        <div class="item-container">
+            <span class="title-control">Hora final</span>
+            <input type="time" class="text-control" formControlName="endTime">
+        </div>
+        <div class="item-container">
+            <span class="title-control">Notificación</span>
+            <input type="text" class="text-control" formControlName="notification">
+        </div>
+    </div>
+    <div class="container buttons">
+        <button mat-raised-button type="button" (click)="cleanFilters()">Borrar filtros</button>
+        <button mat-raised-button type="submit">Consultar</button>
+    </div>
 </form>

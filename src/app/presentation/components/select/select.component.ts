@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-    template: ''
+    template: '',
+    styleUrls: ['./select.component.scss']
+    
 })
 export abstract class Select {
     

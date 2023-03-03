@@ -1,0 +1,17 @@
+::ng-deep {
+    .ng-select .ng-select-container  {
+        border: 3.8px solid #DCDCDC !important;
+        border-radius: 25px !important;
+        height: 40px !important;
+        .ng-value-container {
+            padding-left: 15px;
+            .ng-placeholder {
+                color: #000000 !important;
+            }
+        }
+    }
+
+    .ng-select.ng-select-disabled>.ng-select-container {
+        background-color: rgba(60, 60, 60, 0.3);
+    }
+}

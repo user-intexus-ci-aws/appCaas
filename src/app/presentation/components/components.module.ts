@@ -4,11 +4,15 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectClientComponent } from './select/select.client.component';
 import { SelectProductComponent } from './select/select.product.component';
+import { SelectPrinterComponent } from './select/select.printer.component.ts.component';
+import { SelectTransactionStatusComponent } from './select/select.transaction.status.component copy';
 
 @NgModule({
   declarations: [
     SelectClientComponent,
-    SelectProductComponent
+    SelectProductComponent,
+    SelectPrinterComponent,
+    SelectTransactionStatusComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +26,9 @@ import { SelectProductComponent } from './select/select.product.component';
     ReactiveFormsModule,
     NgSelectModule,
     SelectClientComponent,
-    SelectProductComponent
+    SelectPrinterComponent,
+    SelectProductComponent,
+    SelectTransactionStatusComponent
   ]
 })
 export class ComponentsModule { }

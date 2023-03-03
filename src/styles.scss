@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 
 html, body { height: 100%; }
@@ -2992,3 +2992,76 @@ textarea.cdk-textarea-autosize-measuring-firefox{
     letter-spacing:.0073529412em;
     margin:0 0 64px
 }
+
+/// Flexbox Cristian ///
+
+$font-color: #006985;
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end !important;
+    button {
+        margin: 0 10px;
+        padding: 10px;
+        width: 130px;
+        border: 1.9px solid #C5C5C5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        font-weight: 600;
+        line-height: 30px;
+        height: 50px !important;
+    }
+    button[type=button] {
+        color: $font-color;
+        background: #FFFFFF;
+    }
+    button[type=submit] {
+        color: #FFFFFF;
+        background: $font-color;
+    }
+}
+
+input:disabled {
+    background-color: rgba(60, 60, 60, 0.3);
+}
+
+.item-container {
+    display: grid;
+    flex: 1 0 21%;
+    padding-bottom: 10px;
+    .title-control {
+        margin-left: 18px;
+        font-size: 12px;
+        color: $font-color;
+    }
+}
+
+.select-control {
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.text-control {
+    width: 226px;
+    border: 3.8px solid #DCDCDC;
+    border-radius: 25px;
+    height: 31px;
+    padding-left: 15px;
+}
+
+.title {
+    color: $font-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 45px;
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
