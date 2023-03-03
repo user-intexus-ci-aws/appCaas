@@ -1,5 +1,7 @@
 .sidenav-container {
   height: 100%;
+  background:  white;
+  color: rgba(11, 95, 123, 1);
 }
 
 .sidenav {
@@ -7,7 +9,6 @@
 }
 
 .sidenav.mat-toolbar {
-  background: inherit;
   background:  white;
   color: rgba(11, 95, 123, 1);
 }
@@ -17,5 +18,15 @@
   top: 0;
   z-index: 1;
   background:  white;
+  color: rgba(11, 95, 123, 1);
+}
+
+.mat-expansion-panel {
+  background: white;
+  color: rgba(11, 95, 123, 1);
+}
+
+.mat-list >  .mat-list-item:nth-child(2n+1){
+  background-color:white;
   color: rgba(11, 95, 123, 1);
 }
