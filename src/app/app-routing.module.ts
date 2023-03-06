@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent,pathMatch:'full'},
   {path:'navigation', component:NavigationComponent},
   { path: 'monitoreo', loadChildren: () => import('./presentation/monitoring/monitoring.module').then(n => n.MonitoringModule) },
-  { path: '**', pathMatch: 'full', redirectTo: 'monitoreo' },
+  { path: '**', pathMatch: 'full', redirectTo: 'login' },
 ];
 
 @NgModule({
